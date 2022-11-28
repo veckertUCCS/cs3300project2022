@@ -1,9 +1,36 @@
-<h1>New project</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link 
+6
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" 
+rel="stylesheet">
+  <script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.j
+s"></script>
 
-<%= render "form", project: @project %>
+</head>
 
-<br>
+<body>
+<div class="px-4 py-5 my-5 text-center border border-success rounded border-3">
+  <h1 class="pb-4">Create New Project</h1>
+    <div class="col-lg-6 mx-auto">
+    <%=form_for(@project) do |f|%>
+      <%=f.label :title, class: "container-fluid py-2"%>
+      <%=f.text_field :title, class: "container-fluid"%>
+      <%=f.label :description, class: "container-fluid pt-3 pb-2"%>
+      <%=f.text_area :description, class: "container-fluid pb-5"%>
+      <div class="py-3">
+        <%=f.submit "Create Project", class: "btn btn-success"%>
+      </div>
+    <%end%>
 
-<div>
-  <%= link_to "Back to projects", projects_path %>
-</div>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-5 pb-2">
+        <%= link_to "Back to Projects", projects_path, :class => 'btn btn-dark btn-md px-4 gap-3' %>
+      </div>
+    </div>
+  </div>
+</body>
