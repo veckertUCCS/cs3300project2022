@@ -18,15 +18,7 @@ s"></script>
 <div class="px-4 py-5 my-5 text-center border border-warning rounded border-3">
   <h1 class="pb-4">Edit Project</h1>
     <div class="col-lg-6 mx-auto">
-    <%=form_for(@project) do |f|%>
-      <%=f.label :title, class: "container-fluid py-2"%>
-      <%=f.text_field :title, class: "container-fluid"%>
-      <%=f.label :description, class: "container-fluid pt-3 pb-2"%>
-      <%=f.text_area :description, class: "container-fluid pb-5"%>
-      <div class="py-3">
-        <%=f.submit "Confirm", class: "btn btn-warning"%>
-      </div>
-    <%end%>
+    <%= render "form", project: @project %>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-5 pb-2">
         <%= link_to "Show this project", @project, :class => 'btn btn-dark btn-md px-4 gap-3' %>
         <%= link_to "Back to Projects", projects_path, :class => 'btn btn-dark btn-md px-4 gap-3' %>
