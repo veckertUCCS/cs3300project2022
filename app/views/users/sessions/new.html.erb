@@ -14,7 +14,7 @@ s"></script>
 
 </head>
 
-<div class="container-fluid text-center border border-info rounded border-3"
+<div class="container-fluid text-center border border-info rounded border-3">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
   <h2 class="pt-3">Log In</h2>
@@ -37,7 +37,7 @@ s"></script>
   <% end %>
 
   <div class="actions py-3">
-    <%= f.submit "Log in", :class => "btn btn-dark btn-md px-4 gap-3" %>
+    <%= f.submit "Log In", :class => "btn btn-dark btn-md px-4 gap-3" %>
     <a class="btn btn-dark" href="/" role="button">Home</a>
   </div>
 <% end %>
